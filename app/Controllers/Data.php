@@ -47,6 +47,6 @@ class Data extends BaseController
 
         session()->setFlashdata('pesan', 'Data berhasil di tambahkan.');
 
-        return redirect()->to('/');
+        return redirect()->to('/data');
     }
 }

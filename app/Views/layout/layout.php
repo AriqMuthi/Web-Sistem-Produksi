@@ -18,14 +18,14 @@
 <body class="bg-image" style="background-image: url('/public/image/background.webp');">
   <nav class="navbar navbar-expand-lg navbar-light bg-light p-3">
     <div class="container-fluid">
-      <a class="navbar-brand" href="/">Kemek - Kerupuk Mekar</a>
+      <a class="navbar-brand" href="/">Kekar - Kerupuk Mekar</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
         aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
-          <a class="nav-link" href="/">Data</a>
+          <a class="nav-link" href="/data">Data</a>
           <a class="nav-link" href="/input">Input Produk</a>
           <a class="nav-link" href="/repair">Repair Produk</a>
           <a class="nav-link" href="#">Logout</a>
@@ -38,7 +38,7 @@
     <footer class="fixed-bottom">
       <div class="text-center p-3 bg-light">
         © 2022 Copyright:
-        <a class="text-reset fw-bold" href="/">Kelompok Kemek - UBSI</a>
+        <a class="text-reset fw-bold" href="/">Kelompok Kekar - UBSI</a>
       </div>
     </footer>
     <!-- Copyright -->
