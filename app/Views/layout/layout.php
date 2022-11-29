@@ -18,7 +18,7 @@
 <body class="bg-image" style="background-image: url('/public/image/background.webp');">
   <nav class="navbar navbar-expand-lg navbar-light bg-light p-3">
     <div class="container-fluid">
-      <a class="navbar-brand" href="/">Kekar - Kerupuk Mekar</a>
+      <a class="navbar-brand" href="/">KEKAR - Kerupuk Mekar</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
         aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
