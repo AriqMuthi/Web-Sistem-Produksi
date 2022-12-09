@@ -28,9 +28,22 @@
           <a class="nav-link" href="/data">Data</a>
           <a class="nav-link" href="/input">Input Produk</a>
           <a class="nav-link" href="/repair">Repair Produk</a>
-          <a class="nav-link" href="#">Logout</a>
+          <a class="nav-link" href="/login/logout">Logout</a>
         </div>
       </div>
+      <span class="navbar-text">
+        <?php
+        if (session()->get('id_devisi') == 1) {
+          $d = 'Produksi';
+        } elseif (session()->get('id_devisi') == 2) {
+          $d = 'Quality Control';
+        } elseif (session()->get('id_devisi') == 3) {
+          $d = 'Admin';
+        }
+
+        echo session()->get('nama') . ' / ' . $d;
+        ?>
+      </span>
     </div>
   </nav>
   <?= $this->renderSection('content'); ?>

@@ -13,7 +13,6 @@
                     <table class="table">
                         <thead>
                             <tr>
-                                <th scope="col">Kode</th>
                                 <th scope="col">Tanggal</th>
                                 <th scope="col">Kotak</th>
                                 <th scope="col">Kode Produk</th>
@@ -23,9 +22,6 @@
                         <tbody>
                             <?php foreach ($data as $k): ?>
                             <tr>
-                                <th scope="row">
-                                    <?= $k['id']; ?>
-                                </th>
                                 <td>
                                     <?= $k['created_at']; ?>
                                 </td>

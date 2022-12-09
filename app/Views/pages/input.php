@@ -10,6 +10,11 @@
                                 <h2>Input Data Produk</h2>
                                 <p>Form untuk input produk hasil produksi, Silahkan isi dengan teliti!</p>
                             </div>
+                            <?php if (session()->getFlashdata('pesan')): ?>
+                            <div class="alert alert-danger text-lg-center">
+                                <?= session()->getFlashdata('pesan'); ?>
+                            </div>
+                            <?php endif; ?>
                             <!-- Form isian -->
                             <form action="/data/save" method="post">
                                 <?= csrf_field(); ?>
