@@ -60,7 +60,9 @@ class login extends BaseController
                 } elseif ($data['Id_Devisi'] == 2) {
                     return redirect()->to('/data');
                 } elseif ($data['Id_Devisi'] == 3) {
+                
                     return redirect()->to('/data_admin');
+
                 }
             } else {
                 session()->setFlashdata('pesan', 'Password yang di masukan salah');
