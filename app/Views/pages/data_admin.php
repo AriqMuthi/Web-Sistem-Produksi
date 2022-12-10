@@ -1,5 +1,5 @@
-<?= $this->extend('layout/layout'); ?>
-    <?= $this->section('content'); ?>
+<?= $this->extend('layout/layout_admin'); ?>
+    <?= $this->section('content_admin'); ?>
         <div class="container">
             <div class="row">
                 <div class="col"><br>

@@ -4,7 +4,7 @@ namespace App\Controllers;
 
 use App\Models\DataModel;
 
-class Data extends BaseController
+class data extends BaseController
 {
     protected $dataModel; //agar variabel dataModel bisa digunakan di setiap mothod 
     public function __construct() //agar method bisa digunakan di setiap mothod
@@ -36,6 +36,7 @@ class Data extends BaseController
                 'total' => 'required'
             ])
         ) {
+            session()->setFlashdata('pesan', 'Data tidak lengkap, silahkan isi kembali!');
             return redirect()->to('/input');
         }
         $this->dataModel->save([

@@ -24,18 +24,23 @@
                             <h2>Login</h2>
                             <p>Harap isi dengan benar!</p>
                         </div>
+                        <?php if (session()->getFlashdata('pesan')): ?>
+                        <div class="alert alert-danger text-lg-center">
+                            <?= session()->getFlashdata('pesan'); ?>
+                        </div>
+                        <?php endif; ?>
                         <!-- Form isian -->
-                        <form action="/data/save" method="post">
+                        <form action="/login/loginproses" method="post">
                             <?= csrf_field(); ?>
                                 <!-- agar input data hanya bisa dari halaman ini -->
                                 <div class="form-group">
                                     <label for="user">Username</label>
                                     <input type="text" class="form-control" id="login" placeholder="Masukan Username"
-                                        name="user">
+                                        name="username">
                                 </div>
                                 <div class="form-group mt-3">
                                     <label for="tproduksi">Password</label>
-                                    <input type="text" class="form-control" id="tproduksi"
+                                    <input type="password" class="form-control" id="tproduksi"
                                         placeholder="Masukan Password" name="password">
                                 </div>
                                 <!-- Form tombol -->
