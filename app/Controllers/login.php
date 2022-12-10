@@ -10,7 +10,7 @@ class login extends BaseController
     public function __construct() //agar method bisa digunakan di setiap mothod
 
     {
-        $this->LoginModel = new LoginModel(); //Menyambungkan dengan Model
+        $this->LoginModel = new LoginModel; //Menyambungkan dengan Model
     }
     public function index()
     {
@@ -58,18 +58,16 @@ class login extends BaseController
                 if ($data['Id_Devisi'] == 1) {
                     return redirect()->to('/data');
                 } elseif ($data['Id_Devisi'] == 2) {
-                    return redirect()->to('/data');
+                    return redirect()->to('/data_qc');
                 } elseif ($data['Id_Devisi'] == 3) {
-                
                     return redirect()->to('/data_admin');
-
                 }
             } else {
                 session()->setFlashdata('pesan', 'Password yang di masukan salah');
                 return redirect()->to('/');
             }
         } else {
-            session()->setFlashdata('pesan', 'Email yang di masukan salah');
+            session()->setFlashdata('pesan', 'Username yang di masukan salah');
             return redirect()->to('/');
         }
     }

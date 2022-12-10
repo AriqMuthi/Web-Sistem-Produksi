@@ -25,9 +25,8 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
-                    <a class="nav-link" href="/data_admin">Data Produksi</a>
-                    <a class="nav-link" href="#">Data Quality Control</a>
-                    <a class="nav-link" href="/registrasi_admin">Registrasi</a>
+                    <a class="nav-link" href="/data_qc">Data</a>
+                    <a class="nav-link" href="/input_qc/">Validasi</a>
                     <a class="nav-link" href="/login/logout">Logout</a>
                 </div>
             </div>
@@ -46,7 +45,7 @@
             </span>
         </div>
     </nav>
-    <?= $this->renderSection('content_admin'); ?>
+    <?= $this->renderSection('content_qc'); ?>
         <!-- Copyright -->
         <footer class="fixed-bottom">
             <div class="text-center p-3 bg-light">
