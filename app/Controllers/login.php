@@ -16,7 +16,14 @@ class login extends BaseController
     {
         helper(['form']);
         if (session('logged_in')) {
-            return redirect()->to('/data');
+
+            if (session()->get('id_devisi') == 1) {
+                return redirect()->back();
+            } elseif (session()->get('id_devisi') == 2) {
+                return redirect()->back();
+            } elseif (session()->get('id_devisi') == 3) {
+                return redirect()->back();
+            }
         }
         return view('/login');
     }
@@ -53,7 +60,9 @@ class login extends BaseController
                 } elseif ($data['Id_Devisi'] == 2) {
                     return redirect()->to('/data');
                 } elseif ($data['Id_Devisi'] == 3) {
-                    return redirect()->to('/input');
+                
+                    return redirect()->to('/data_admin');
+
                 }
             } else {
                 session()->setFlashdata('pesan', 'Password yang di masukan salah');
