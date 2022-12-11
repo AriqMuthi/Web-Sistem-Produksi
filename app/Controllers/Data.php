@@ -14,11 +14,9 @@ class data extends BaseController
     }
     public function index()
     {
-        $dataa = $this->dataModel->findAll(); //Membaca semua data di database
-
         $data = [
             'title' => 'Data Produk',
-            'data' => $dataa
+            'data' => $this->dataModel->getproduk()
         ];
 
         return view('pages/data', $data);
@@ -40,7 +38,7 @@ class data extends BaseController
             return redirect()->to('/input');
         }
         $this->dataModel->save([
-            'created_at' => $this->request->getPost('tgl'),
+            'tgl' => $this->request->getPost('tgl'),
             'kotak' => $this->request->getPost('kotak'),
             'kode' => $this->request->getPost('kode'),
             'total' => $this->request->getPost('total')

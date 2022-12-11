@@ -26,7 +26,6 @@
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
                     <a class="nav-link" href="/data_qc">Data</a>
-                    <a class="nav-link" href="/input_qc/">Validasi</a>
                     <a class="nav-link" href="/login/logout">Logout</a>
                 </div>
             </div>

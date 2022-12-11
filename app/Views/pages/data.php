@@ -17,13 +17,16 @@
                                 <th scope="col">Kotak</th>
                                 <th scope="col">Kode Produk</th>
                                 <th scope="col">Total</th>
+                                <th scope="col">Reject</th>
+                                <th scope="col">Repair</th>
+                                <th scope="col">Validasi</th>
                             </tr>
                         </thead>
                         <tbody>
                             <?php foreach ($data as $k): ?>
                             <tr>
                                 <td>
-                                    <?= $k['created_at']; ?>
+                                    <?= $k['tgl']; ?>
                                 </td>
                                 <td>
                                     <?= $k['kotak']; ?>
@@ -33,6 +36,22 @@
                                 </td>
                                 <td>
                                     <?= $k['total']; ?>
+                                </td>
+                                <td>
+                                    <?= $k['reject']; ?>
+                                </td>
+                                <td>
+                                    <?= $k['repair']; ?>
+                                </td>
+                                <td>
+                                    <?php
+
+                                if ($k['validasi'] == 0) {
+                                    echo "Waiting";
+                                } else {
+                                    echo "Approv";
+                                }
+                                    ?>
                                 </td>
                             </tr>
                             <?php endforeach; ?>

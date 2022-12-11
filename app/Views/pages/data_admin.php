@@ -23,7 +23,7 @@
                             <?php foreach ($data as $k): ?>
                             <tr>
                                 <td>
-                                    <?= $k['created_at']; ?>
+                                    <?= $k['tgl']; ?>
                                 </td>
                                 <td>
                                     <?= $k['kotak']; ?>
