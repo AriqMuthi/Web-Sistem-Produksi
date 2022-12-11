@@ -10,15 +10,13 @@ class data extends BaseController
     public function __construct() //agar method bisa digunakan di setiap mothod
 
     {
-        $this->dataModel = new DataModel(); //Menyambungkan dengan Model
+        $this->dataModel = new DataModel; //Menyambungkan dengan Model
     }
     public function index()
     {
-        $dataa = $this->dataModel->findAll(); //Membaca semua data di database
-
         $data = [
             'title' => 'Data Produk',
-            'data' => $dataa
+            'data' => $this->dataModel->getproduk()
         ];
 
         return view('pages/data', $data);
@@ -40,10 +38,10 @@ class data extends BaseController
             return redirect()->to('/input');
         }
         $this->dataModel->save([
-            'created_at' => $this->request->getVar('tgl'),
-            'kotak' => $this->request->getVar('kotak'),
-            'kode' => $this->request->getVar('kode'),
-            'total' => $this->request->getVar('total')
+            'tgl' => $this->request->getPost('tgl'),
+            'kotak' => $this->request->getPost('kotak'),
+            'kode' => $this->request->getPost('kode'),
+            'total' => $this->request->getPost('total')
         ]);
 
         session()->setFlashdata('pesan', 'Data berhasil di tambahkan.');
